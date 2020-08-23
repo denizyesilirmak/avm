@@ -1,15 +1,12 @@
 import React from 'react'
 import { View } from 'react-native'
-import CityPicker from './Components/Cities/CityPicker'
 
-
-class App extends React.Component {
+class Intro extends React.Component{
   render(){
     return(
       <View>
+        
       </View>
     )
   }
 }
-
-export default App

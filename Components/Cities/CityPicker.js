@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, FlatList, TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { View, FlatList, Text, StyleSheet, Pressable } from 'react-native'
 import CitiesList from './Cities.json'
 
 
@@ -26,9 +26,9 @@ class CityPicker extends React.Component {
           data={CitiesList.sort()}
           keyExtractor={(item) => item.code}
           renderItem={({ item }) => (
-            <TouchableOpacity style={{ width: '40%', margin: '5%' }} onPress={() => alert("anan")}>
+            <Pressable style={{ width: '40%', margin: '5%', marginBottom: 5 }} onPress={() => alert("anan")}>
               <City city={item} />
-            </TouchableOpacity>
+            </Pressable>
           )}
         />
       </View>
@@ -40,26 +40,27 @@ const styles = StyleSheet.create({
   cityStyle: {
     width: '100%',
     height: 150,
-    backgroundColor: '#0476D9',
-    borderRadius: 10,
+    backgroundColor: '#ebebeb',
+    borderRadius: 30,
     overflow: "hidden",
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    elevation: 2
   },
   cityCode: {
     fontSize: 80,
     fontWeight: 'bold',
-    color: '#F2F2F2',
+    color: '#0ed185',
     transform: [
-      { rotateZ: "-20deg" }
+      { rotateZ: "-25deg" }
     ],
     position: 'absolute',
-    bottom: -25,
-    right: -10
+    bottom: -20,
+    right: -6
   },
   cityName: {
-    color: '#F2F2F2',
-    fontSize: 18,
+    color: '#000000',
+    fontSize: 20,
     fontWeight: 'bold',
     elevation: 2
   }
